@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,112 @@
   to {
     transform: rotate(360deg);
   }
+} */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+.container {
+  margin: 0 auto;
+  background-color: #d4e6ec;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+}
+
+.footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+.footer span {
+  color: #b9acac;
+}
+.header h1 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+  background-color: #1f1d18;
+}
+
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+  text-align: center;
+}
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin-top: 4px;
+}
+.note h4{
+  
+}
+/*  */
+.note button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  /* color: #44433f; */
+  /* background-color: #e4e0ce; */
+  border: none;
+  width: 60px;
+  height: 25px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 2px;
+}
+
+form {
+  margin-top: 20px;
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  background-color: #afa27d;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+
+form button {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #f5ba13;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+/* .note-form input[type="text"] {
+  width: 100%;
+  padding: 10px;
+} */
