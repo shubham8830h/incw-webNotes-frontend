@@ -5,6 +5,7 @@ import Footer from "./component/Footer";
 import axios from "axios";
 import NoteList from "./component/NoteList";
 import NoteForm from "./component/NoteForm";
+import { BASE_URL } from "./component/helper";
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -15,7 +16,7 @@ function App() {
 
   const fetchNotes = async () => {
     try {
-      const response = await axios.get("/webnotes/getnotes");
+      const response = await axios.get(`${BASE_URL}/webnotes/getnotes`);
       const data = await response.data;
       setNotes(data);
       console.log(data);
@@ -27,7 +28,7 @@ function App() {
   //to delete note fuction
   const deleteNote = async (noteId) => {
     try {
-      await axios.delete(`/webnotes/deletenotes/${noteId}`);
+      await axios.delete(`${BASE_URL}/webnotes/deletenotes/${noteId}`);
       setNotes(notes.filter((note) => note.id !== noteId));
     } catch (error) {
       console.error("Error deleting note:", error);
@@ -36,7 +37,7 @@ function App() {
 
   const addNote = async (content, title) => {
     try {
-      const response = await axios.post("/webnotes/addnotes", {
+      const response = await axios.post(`${BASE_URL}/webnotes/addnotes`, {
         title: title,
         content: content,
       });
